@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://6vyp1lyav2do"]
+
+[ext_resource type="PackedScene" uid="uid://d2kahe6bx3p63" path="res://Base_DONOTDELETE/Scenes/MovingBlocks/Normal/_moving_block.tscn" id="1_84psd"]
+
+[node name="MovingBlockRight" type="Node2D" unique_id=1089757555]
+rotation = 1.5707964
+
+[node name="_moving_block" parent="." unique_id=2060236389 instance=ExtResource("1_84psd")]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cjxocbnjbyt23"]
+
+[ext_resource type="Texture2D" uid="uid://coumg0tomnngj" path="res://Base_DONOTDELETE/Assets/Tiles/BackGrounds/BackGrounds.png" id="1_s63c5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fxp7f"]
+texture = ExtResource("1_s63c5")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xgd76"]
+sources/0 = SubResource("TileSetAtlasSource_fxp7f")
+
+[node name="Background" type="TileMapLayer" unique_id=85422948]
+texture_filter = 1
+tile_set = SubResource("TileSet_xgd76")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b0ceb1j2chy3s"]
+
+[ext_resource type="Script" uid="uid://bebxm5kbrekg8" path="res://Base_DONOTDELETE/Scenes/Speed/Slow.cs" id="1_p40ov"]
+[ext_resource type="Texture2D" uid="uid://cbhknrtttsaim" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Speed/Slow.png" id="1_rvatd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p40ov"]
+size = Vector2(10, 10)
+
+[node name="Slow" type="Area2D" unique_id=1571939874]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_p40ov")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1385033731]
+texture_filter = 1
+texture = ExtResource("1_rvatd")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=46654224]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_p40ov")

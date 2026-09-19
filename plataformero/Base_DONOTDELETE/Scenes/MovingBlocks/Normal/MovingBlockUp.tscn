@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cfswqypily1v"]
+
+[ext_resource type="PackedScene" uid="uid://d2kahe6bx3p63" path="res://Base_DONOTDELETE/Scenes/MovingBlocks/Normal/_moving_block.tscn" id="1_d2vle"]
+
+[node name="MovingBlockUp" type="Node2D" unique_id=1089757555]
+
+[node name="_moving_block" parent="." unique_id=2060236389 instance=ExtResource("1_d2vle")]

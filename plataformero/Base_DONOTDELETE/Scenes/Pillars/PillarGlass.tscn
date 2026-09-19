@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://bmmqhtb4nmhq5"]
+
+[ext_resource type="Script" uid="uid://kpomnoekw7yr" path="res://Base_DONOTDELETE/Scenes/Pillars/_PillarBase.cs" id="1_gsqv4"]
+[ext_resource type="Texture2D" uid="uid://iakwtc7kan55" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Pillars/Glass/Pillar_Glass_Bottom.png" id="2_gsqv4"]
+[ext_resource type="Texture2D" uid="uid://cho5x04f2qs2q" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Pillars/Glass/Pillar_Glass_Floater.png" id="3_uaadi"]
+[ext_resource type="Texture2D" uid="uid://goxw0k6yp2rd" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Pillars/Glass/Pillar_Glass_Middle.png" id="4_lqqhs"]
+[ext_resource type="Texture2D" uid="uid://pkep1vxf02if" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Pillars/Glass/Pillar_Glass_Top.png" id="5_ggil4"]
+[ext_resource type="Texture2D" uid="uid://blmwdubdjgm6y" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Pillars/Glass/Pillar_Glass_Void.png" id="6_v1nhs"]
+[ext_resource type="Texture2D" uid="uid://b1eub2dpt1qq4" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Pillars/Glass/Pillar_Glass_Default.png" id="7_g6rqr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3d0vb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gsqv4")
+}],
+"loop": true,
+"name": &"Bottom",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_uaadi")
+}],
+"loop": true,
+"name": &"Floater",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lqqhs")
+}],
+"loop": true,
+"name": &"Middle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ggil4")
+}],
+"loop": true,
+"name": &"Top",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_v1nhs")
+}],
+"loop": true,
+"name": &"Void",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_g6rqr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upxub"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7na15"]
+size = Vector2(14, 1)
+
+[node name="PillarNormal" type="StaticBody2D" unique_id=37562732]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_gsqv4")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1048083458]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3d0vb")
+autoplay = "default"
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=698219524]
+shape = SubResource("RectangleShape2D_upxub")
+
+[node name="Top" type="Area2D" parent="." unique_id=1769066285]
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top" unique_id=74980555]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_7na15")
+
+[node name="Bottom" type="Area2D" parent="." unique_id=168723357]
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom" unique_id=1261551468]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_7na15")

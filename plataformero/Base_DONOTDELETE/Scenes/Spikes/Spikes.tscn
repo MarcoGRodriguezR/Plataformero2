@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bpn3nt1imdfnm"]
+
+[ext_resource type="Texture2D" uid="uid://cbmwj60jegwpl" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Spikes/Spikes.png" id="1_j3huj"]
+[ext_resource type="Script" uid="uid://cf0x3dwpfw7qf" path="res://Base_DONOTDELETE/Scenes/Spikes/Spikes.cs" id="2_j3huj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f08an"]
+size = Vector2(16, 7)
+
+[node name="Spikes" type="Node2D" unique_id=1782540729]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1557709052]
+texture_filter = 1
+texture = ExtResource("1_j3huj")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2066676934]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("2_j3huj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=944465341]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_f08an")

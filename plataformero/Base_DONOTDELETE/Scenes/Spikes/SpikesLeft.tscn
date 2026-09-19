@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dvide7yg2kl0d"]
+
+[ext_resource type="PackedScene" uid="uid://bpn3nt1imdfnm" path="res://Base_DONOTDELETE/Scenes/Spikes/Spikes.tscn" id="1_ih4ur"]
+
+[node name="SpikesUp" type="Node2D" unique_id=1793974071]
+rotation = 4.712389
+
+[node name="Spikes" parent="." unique_id=1782540729 instance=ExtResource("1_ih4ur")]

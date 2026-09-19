@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c2pfuisa0br81"]
+
+[ext_resource type="Script" uid="uid://4sgjxn5o0ugn" path="res://Base_DONOTDELETE/Scenes/GravStations/_GravStationHelper.cs" id="1_j0mgj"]
+[ext_resource type="Texture2D" uid="uid://cksndelff0yjh" path="res://Base_DONOTDELETE/Assets/Tiles/Object/GravStations/GravStation1.png" id="1_xaau7"]
+[ext_resource type="Texture2D" uid="uid://bhmh0shmoa23p" path="res://Base_DONOTDELETE/Assets/Tiles/Object/GravStations/GravStation2.png" id="2_j0mgj"]
+[ext_resource type="Texture2D" uid="uid://bj4nccf5yux2r" path="res://Base_DONOTDELETE/Assets/Tiles/Object/GravStations/GravStation3.png" id="3_s3o4s"]
+[ext_resource type="Texture2D" uid="uid://b0yff1vxhlw6s" path="res://Base_DONOTDELETE/Assets/Tiles/Object/GravStations/GravStation4.png" id="4_31xqe"]
+[ext_resource type="Texture2D" uid="uid://clf76b3ix4541" path="res://Base_DONOTDELETE/Assets/Tiles/Object/GravStations/GravStation5.png" id="5_vdmfk"]
+[ext_resource type="Texture2D" uid="uid://orhrwrqerpc3" path="res://Base_DONOTDELETE/Assets/Tiles/Object/GravStations/GravStation6.png" id="6_n6qvo"]
+[ext_resource type="Texture2D" uid="uid://ipiygr8b5ofo" path="res://Base_DONOTDELETE/Assets/Tiles/Object/GravStations/GravStation7.png" id="7_dirna"]
+[ext_resource type="Texture2D" uid="uid://ctom5xwqjhxbd" path="res://Base_DONOTDELETE/Assets/Tiles/Object/GravStations/GravStation8.png" id="8_pjjhu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ydwb2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xaau7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j0mgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s3o4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_31xqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vdmfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n6qvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dirna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pjjhu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xaau7"]
+size = Vector2(16, 16)
+
+[node name="GravStation" type="Node2D" unique_id=1319877667]
+script = ExtResource("1_j0mgj")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1391693012]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ydwb2")
+autoplay = "default"
+frame_progress = 0.38820472
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1056268781]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=726884045]
+shape = SubResource("RectangleShape2D_xaau7")

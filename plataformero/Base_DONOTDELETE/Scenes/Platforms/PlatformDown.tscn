@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c8vfp6r2w4tg3"]
+
+[ext_resource type="PackedScene" uid="uid://df4shye8db8uv" path="res://Base_DONOTDELETE/Scenes/Platforms/_PlatformBase.tscn" id="1_dw4um"]
+[ext_resource type="Script" uid="uid://pw4dcq75aobh" path="res://Base_DONOTDELETE/Scenes/Platforms/PlatformDown.cs" id="2_dw4um"]
+
+[node name="PlatformDown" type="Node2D" unique_id=1496126401]
+rotation = 3.1415927
+
+[node name="PlatformBase" parent="." unique_id=151665134 instance=ExtResource("1_dw4um")]
+script = ExtResource("2_dw4um")

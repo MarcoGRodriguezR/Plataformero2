@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c6oxut1gi6jrs"]
+
+[ext_resource type="Script" uid="uid://0hp45mk4groc" path="res://Base_DONOTDELETE/Scenes/GravStations/LeftGravStation.cs" id="1_m10ie"]
+[ext_resource type="PackedScene" uid="uid://c2pfuisa0br81" path="res://Base_DONOTDELETE/Scenes/GravStations/_GravStation.tscn" id="2_qxfn4"]
+
+[node name="LeftGravStation" type="Node2D" unique_id=641872609]
+rotation = 1.5707964
+script = ExtResource("1_m10ie")
+
+[node name="GravStation" parent="." unique_id=1319877667 instance=ExtResource("2_qxfn4")]

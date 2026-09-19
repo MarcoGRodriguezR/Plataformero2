@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dgabkbwqk6ga"]
+
+[ext_resource type="Script" uid="uid://drnkyf1a85dc4" path="res://Base_DONOTDELETE/Scenes/CheckPoint/CheckPoint.cs" id="1_7vv6b"]
+[ext_resource type="Texture2D" uid="uid://dpjfdkjkgxnx2" path="res://Base_DONOTDELETE/Assets/Tiles/Object/CheckPoint/Flag_Touched.png" id="1_u3jd6"]
+[ext_resource type="Texture2D" uid="uid://bnns65t57qsa0" path="res://Base_DONOTDELETE/Assets/Tiles/Object/CheckPoint/Flag_Untouched.png" id="2_7vv6b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bf2qc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u3jd6")
+}],
+"loop": true,
+"name": &"Touched",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7vv6b")
+}],
+"loop": true,
+"name": &"Untouched",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3jd6"]
+size = Vector2(16, 16)
+
+[node name="CheckPoint" type="Node2D" unique_id=1206804602]
+script = ExtResource("1_7vv6b")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=668820441]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_bf2qc")
+animation = &"Untouched"
+autoplay = "Touched"
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2057451194]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1728124711]
+shape = SubResource("RectangleShape2D_u3jd6")

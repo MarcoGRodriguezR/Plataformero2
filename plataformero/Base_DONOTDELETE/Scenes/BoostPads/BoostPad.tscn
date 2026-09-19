@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b4fk74ok612qg"]
+
+[ext_resource type="Script" uid="uid://bt47vpr5qp6tp" path="res://Base_DONOTDELETE/Scenes/BoostPads/_BoostPadHelper.cs" id="1_kqr6j"]
+[ext_resource type="Texture2D" uid="uid://drgvvo4evvq21" path="res://Base_DONOTDELETE/Assets/Tiles/Object/BoostPads/BoostPad.png" id="2_kqr6j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6r1p3"]
+size = Vector2(10, 13)
+
+[node name="BoostPad" type="Node2D" unique_id=966806918]
+script = ExtResource("1_kqr6j")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2084673804]
+texture_filter = 1
+texture = ExtResource("2_kqr6j")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=989241306]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=454366765]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_6r1p3")

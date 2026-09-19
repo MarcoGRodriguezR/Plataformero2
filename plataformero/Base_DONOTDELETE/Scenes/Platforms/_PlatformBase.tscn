@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://df4shye8db8uv"]
+
+[ext_resource type="Script" uid="uid://c4xb7jad027xn" path="res://Base_DONOTDELETE/Scenes/Platforms/_PlatformBase.cs" id="1_8byyd"]
+[ext_resource type="Texture2D" uid="uid://cn6n3f8dsflyj" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Platforms/Left.png" id="1_whdna"]
+[ext_resource type="Texture2D" uid="uid://cfx8xxo7d6cg5" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Platforms/Left_Empty.png" id="2_8byyd"]
+[ext_resource type="Texture2D" uid="uid://cuacq56ughui6" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Platforms/Left_Lone.png" id="3_vl2f3"]
+[ext_resource type="Texture2D" uid="uid://cw4nrq4880m1y" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Platforms/Middle.png" id="4_2ad1j"]
+[ext_resource type="Texture2D" uid="uid://ctef4thm3irm8" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Platforms/Right.png" id="5_kqd2n"]
+[ext_resource type="Texture2D" uid="uid://d0uatrix1vmwd" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Platforms/Right_Empty.png" id="6_8vh7v"]
+[ext_resource type="Texture2D" uid="uid://btk20aubx0hax" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Platforms/Right_Lone.png" id="7_1olju"]
+[ext_resource type="Texture2D" uid="uid://dla5utlik6605" path="res://Base_DONOTDELETE/Assets/Tiles/Object/Platforms/default.png" id="8_l02lp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bc6kv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_whdna")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8byyd")
+}],
+"loop": true,
+"name": &"Left_Empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vl2f3")
+}],
+"loop": true,
+"name": &"Left_Lone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2ad1j")
+}],
+"loop": true,
+"name": &"Middle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kqd2n")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8vh7v")
+}],
+"loop": true,
+"name": &"Right_Empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1olju")
+}],
+"loop": true,
+"name": &"Right_Lone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_l02lp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whdna"]
+size = Vector2(16, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8byyd"]
+size = Vector2(1, 3)
+
+[node name="PlatformBase" type="StaticBody2D" unique_id=151665134]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_8byyd")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1398882295]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_bc6kv")
+autoplay = "default"
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=2073701414]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_whdna")
+one_way_collision = true
+
+[node name="Left Block" type="Area2D" parent="." unique_id=1699794468]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Block" unique_id=273042706]
+position = Vector2(-9.5, -5.5)
+shape = SubResource("RectangleShape2D_8byyd")
+
+[node name="Left Platform" type="Area2D" parent="." unique_id=1735780217]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Platform" unique_id=328999172]
+position = Vector2(-9.5, -5.5)
+shape = SubResource("RectangleShape2D_8byyd")
+
+[node name="Right Block" type="Area2D" parent="." unique_id=1749035153]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Block" unique_id=65277272]
+position = Vector2(9.5, -5.5)
+shape = SubResource("RectangleShape2D_8byyd")
+
+[node name="Right Platform" type="Area2D" parent="." unique_id=1562186898]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Platform" unique_id=1932224904]
+position = Vector2(9.5, -5.5)
+shape = SubResource("RectangleShape2D_8byyd")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://yb00iaqx1v3e"]
+
+[ext_resource type="PackedScene" uid="uid://b4fk74ok612qg" path="res://Base_DONOTDELETE/Scenes/BoostPads/BoostPad.tscn" id="1_2dn1i"]
+[ext_resource type="Script" uid="uid://dj2d0lrrybe83" path="res://Base_DONOTDELETE/Scenes/BoostPads/LeftPad.cs" id="1_4rnwq"]
+
+[node name="LeftPad" type="Node2D" unique_id=306164045]
+rotation = 4.712389
+script = ExtResource("1_4rnwq")
+
+[node name="BoostPad" parent="." unique_id=966806918 instance=ExtResource("1_2dn1i")]

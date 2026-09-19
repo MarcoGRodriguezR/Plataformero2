@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c8sxvpqyi584l"]
+
+[ext_resource type="Script" uid="uid://yot4av03nmal" path="res://Base_DONOTDELETE/Scenes/UI/LevelChangeButton.cs" id="1_e3kl4"]
+
+[node name="LevelChangeButton" type="Button" unique_id=2060282351]
+text = "Level ?"
+script = ExtResource("1_e3kl4")

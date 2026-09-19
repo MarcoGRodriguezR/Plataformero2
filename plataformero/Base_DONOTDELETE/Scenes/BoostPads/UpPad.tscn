@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ccut1pgophs4a"]
+
+[ext_resource type="PackedScene" uid="uid://b4fk74ok612qg" path="res://Base_DONOTDELETE/Scenes/BoostPads/BoostPad.tscn" id="1_7c16u"]
+[ext_resource type="Script" uid="uid://dqfgwdscu618e" path="res://Base_DONOTDELETE/Scenes/BoostPads/UpPad.cs" id="1_30jen"]
+
+[node name="UpPad" type="Node2D" unique_id=306164045]
+script = ExtResource("1_30jen")
+
+[node name="BoostPad" parent="." unique_id=966806918 instance=ExtResource("1_7c16u")]

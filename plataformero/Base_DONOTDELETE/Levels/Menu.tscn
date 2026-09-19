@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bnh1udvsrppga"]
+
+[ext_resource type="Texture2D" uid="uid://coumg0tomnngj" path="res://Base_DONOTDELETE/Assets/Tiles/BackGrounds/BackGrounds.png" id="1_46pj2"]
+[ext_resource type="PackedScene" uid="uid://c8sxvpqyi584l" path="res://Base_DONOTDELETE/Scenes/UI/LevelChangeButton.tscn" id="2_bfcyt"]
+
+[node name="Menu" type="Node2D" unique_id=33880991]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1156027199]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=939316329]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_46pj2")
+stretch_mode = 1
+
+[node name="Level Selection" type="GridContainer" parent="UI" unique_id=1462197374]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 37.0
+offset_right = -40.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Level 0" parent="UI/Level Selection" unique_id=2060282351 instance=ExtResource("2_bfcyt")]
+layout_mode = 2
+text = "Level 0"
+UID = "uid://dh56rnpyemhxu"

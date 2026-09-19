@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dx1ww1slb4e2"]
+
+[ext_resource type="Script" uid="uid://3s6f2hcwj01c" path="res://Base_DONOTDELETE/Scenes/PlayerStuff/Player.cs" id="1_s8jw1"]
+[ext_resource type="Texture2D" uid="uid://emj2uuax5fed" path="res://Base_DONOTDELETE/Assets/Player/Auto.png" id="1_xvkro"]
+[ext_resource type="Texture2D" uid="uid://x60ufgh2j2eu" path="res://Base_DONOTDELETE/Assets/UI/UnZoomCamera.png" id="2_34kmx"]
+[ext_resource type="Texture2D" uid="uid://bogvcsqdbfuqq" path="res://Base_DONOTDELETE/Assets/UI/ZoomCamera.png" id="3_s8jw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvkro"]
+size = Vector2(10, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34kmx"]
+size = Vector2(2, 10)
+
+[node name="Player" type="CharacterBody2D" unique_id=1127276959]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_s8jw1")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1736030685]
+texture_filter = 1
+scale = Vector2(0.13, 0.15)
+texture = ExtResource("1_xvkro")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1103565309]
+shape = SubResource("RectangleShape2D_xvkro")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1511450885]
+zoom = Vector2(2, 2)
+
+[node name="UI" type="CanvasLayer" parent="Camera2D" unique_id=1756414893]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/UI" unique_id=480652668]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+
+[node name="Left" type="HBoxContainer" parent="Camera2D/UI/HBoxContainer" unique_id=638162119]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Position" type="Label" parent="Camera2D/UI/HBoxContainer/Left" unique_id=1791647119]
+layout_mode = 2
+text = "Position: (0, 0)
+Velocity: (0, 0)"
+
+[node name="Right" type="HBoxContainer" parent="Camera2D/UI/HBoxContainer" unique_id=722848359]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="UnZoomCamera" type="Button" parent="Camera2D/UI/HBoxContainer/Right" unique_id=1499077923]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("2_34kmx")
+flat = true
+
+[node name="ZoomCamera" type="Button" parent="Camera2D/UI/HBoxContainer/Right" unique_id=877269961]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+icon = ExtResource("3_s8jw1")
+flat = true
+
+[node name="LeftHitbox" type="Area2D" parent="." unique_id=217232388]
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftHitbox" unique_id=150785314]
+position = Vector2(-6, 0)
+shape = SubResource("RectangleShape2D_34kmx")
+
+[node name="RightHitbox" type="Area2D" parent="." unique_id=812043854]
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightHitbox" unique_id=1481019033]
+position = Vector2(6, 0)
+shape = SubResource("RectangleShape2D_34kmx")

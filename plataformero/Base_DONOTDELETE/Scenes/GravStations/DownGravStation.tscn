@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bo2lw14s6a7u8"]
+
+[ext_resource type="Script" uid="uid://8464mb3lb7py" path="res://Base_DONOTDELETE/Scenes/GravStations/DownGravStation.cs" id="1_ocj4n"]
+[ext_resource type="PackedScene" uid="uid://c2pfuisa0br81" path="res://Base_DONOTDELETE/Scenes/GravStations/_GravStation.tscn" id="2_w42wp"]
+
+[node name="DownGravStation" type="Node2D" unique_id=641872609]
+script = ExtResource("1_ocj4n")
+
+[node name="GravStation" parent="." unique_id=1319877667 instance=ExtResource("2_w42wp")]
